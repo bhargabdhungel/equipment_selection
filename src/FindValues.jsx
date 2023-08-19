@@ -15,14 +15,14 @@ function WtPercent(props) {
     passingVal = Math.round(passingVal * 100) / 100;
   }
   return (
-    <div className="passing">
+    <div className="passing-input">
       <input
         type="number"
         name="size"
         placeholder="Size"
         onChange={handleChange}
       ></input>
-      {passingVal >= 0 && <div className="passing-val make-inline">Passing {passingVal} 😊</div>}
+      {passingVal >= 0 && <div className="passing"><h2>Passing {passingVal} 😊</h2></div>}
     </div>
   );
 }
