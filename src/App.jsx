@@ -15,7 +15,7 @@ function App() {
   console.log(points);
   return (
     <>
-      <h1>Equipment Selection</h1>
+      <h1>Equipment Design</h1>
       <Plot />
       <InputPoints />
     </>
