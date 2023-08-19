@@ -63,9 +63,11 @@ function InputPoints() {
     <div>
       <form id="pointForm" onSubmit={handleSubmit}>
         <Point />
-        <AddPoint />
-        <ClearPoints />
-        <BackPoint />
+        <div className="func-button">
+          <AddPoint />
+          <ClearPoints />
+          <BackPoint />
+        </div>
       </form>
     </div>
   );

@@ -11,35 +11,39 @@ h1 {
 }
 
 .point input {
-  width: 80px;
-  height: 40px;
+  width: 160px;
+  height: 80px;
   display: inline;
   border: none;
-  border-radius: 15px;
+  border-radius: 30px;
   margin: 20px;
   text-align: center;
+  font-size: 24px;
 }
 
 .button {
   margin-top: 20px;
   margin-bottom: 20px;
   border: none;
-  border-radius: 15px;
-  font-size: 18px;
+  border-radius: 30px;
+  font-size: 24px;
   margin: 20px;
   text-align: center;
-  width: 80px;
-  height: 40px;
+  width: 160px;
+  height: 80px;
   background-color: rgb(255, 255, 255);
   color: black;
   font-weight: 500;
+  display: block;
+  /* background-color: green; */
 }
 
 #pointForm {
   display: flex;
-  justify-content: center;
   align-items: center;
   margin: 50px;
+  justify-content: space-around;
+  /* background-color: green; */
 }
 
 .graph {
@@ -51,4 +55,12 @@ h1 {
   justify-content: center;
   align-items: center;
   border-radius: 30px;
+}
+
+.point {
+  /* background-color: red; */
+}
+
+.func-button {
+  /* background-color: blue; */
 }
