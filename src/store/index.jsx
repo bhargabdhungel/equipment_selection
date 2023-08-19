@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import pointsSlice from "./points-slice";
+import dataSlice from "./data-slice";
 
 const store = configureStore({
-  reducer: { points: pointsSlice.reducer },
+  reducer: { data: dataSlice.reducer },
 });
 
 export default store;

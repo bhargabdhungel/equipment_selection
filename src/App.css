@@ -1,57 +1,53 @@
-#root {
-  /* margin: 0 auto; */
-  text-align: center;
-}
+/* #root { */
+/* text-align: center; */
+/* } */
 
 h1 {
+  margin-left: 200px;
   font-size: 3rem;
   font-weight: 600;
   color: white;
-  /* line-height: 1.5; */
+  line-height: 1.5;
 }
 
 .point input {
   width: 80px;
-  height: 30px;
+  height: 40px;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 20px;
-  /* display: inline; */
-  /* background-color: white; */
-  /* color: black; */
-  /* margin-left: 20px; */
+  text-align: center;
 }
-/* .point { */
-/* display: block; */
-/* margin: 2px; */
-/* display: flex; */
-
-/* flex-direction: column; */
-/* justify-content: center; */
-/* justify-content: center; */
-/* text-align: start; */
-/* background-color: red; */
-/* } */
 
 .button {
-  /* margin: 20px !important; */
   margin-top: 20px;
   margin-bottom: 20px;
-  /* background-color: rgb(255, 255, 255); */
-  /* color: black; */
   border: none;
   border-radius: 15px;
   font-size: 18px;
   margin: 20px;
   text-align: center;
-  display: inline;
   width: 80px;
   height: 40px;
   background-color: rgb(255, 255, 255);
   color: black;
   font-weight: 500;
-  /* width: 50px; */
-  /* width: 20px; */
+}
 
-  /* background-color: red; */
+#pointForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.graph {
+  background-color: rgb(255, 255, 255);
+  width: 830px;
+  height: 480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
 }

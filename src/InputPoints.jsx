@@ -1,20 +1,18 @@
 import { useDispatch } from "react-redux";
-import { pointsActions } from "./store/points-slice";
+import { dataActions } from "./store/data-slice";
 
 function Point() {
   return (
     <div className="point">
-      <label>Size</label>
-      <input type="number" name="x[]"></input>
-      <label>Weight</label>
-      <input type="number" name="y[]"></input>
+      <input type="number" name="x" placeholder="Size"></input>
+      <input type="number" name="y" placeholder="Weight"></input>
     </div>
   );
 }
 
 function AddPoint() {
   return (
-    <button type="submit" id="addPointBtn" className="button">
+    <button type="submit" className="button">
       ADD
     </button>
   );
@@ -23,15 +21,10 @@ function AddPoint() {
 function ClearPoints() {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(pointsActions.clearPoints());
+    dispatch(dataActions.clearPoints());
   };
   return (
-    <button
-      type="button"
-      id="clearPointsBtn"
-      onClick={handleClick}
-      className="button"
-    >
+    <button type="button" onClick={handleClick} className="button">
       CLEAR
     </button>
   );
@@ -40,15 +33,10 @@ function ClearPoints() {
 function BackPoint() {
   const dispatch = useDispatch();
   const handleClick = () => {
-    dispatch(pointsActions.removePoint());
+    dispatch(dataActions.removePoint());
   };
   return (
-    <button
-      type="button"
-      id="backPointBtn"
-      onClick={handleClick}
-      className="button"
-    >
+    <button type="button" className="button" onClick={handleClick}>
       BACK
     </button>
   );
@@ -59,21 +47,20 @@ function InputPoints() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    var x = e.target.elements["x[]"].value;
-    var y = e.target.elements["y[]"].value;
+    var x = e.target.elements["x"].value;
+    var y = e.target.elements["y"].value;
 
-    e.target.elements["x[]"].value = "";
-    e.target.elements["y[]"].value = "";
-    e.target.elements["x[]"].focus();
+    e.target.elements["x"].value = "";
+    e.target.elements["y"].value = "";
+    e.target.elements["x"].focus();
 
     if (x === "" || y === "") {
       return;
     }
-    dispatch(pointsActions.addPoint({ point: [Number(x), Number(y)] }));
+    dispatch(dataActions.addPoint({ point: [Number(x), Number(y)] }));
   };
   return (
     <div>
-      <h1>Input Points</h1>
       <form id="pointForm" onSubmit={handleSubmit}>
         <Point />
         <AddPoint />
