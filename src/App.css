@@ -3,14 +3,14 @@
 /* } */
 
 h1 {
-  margin-left: 200px;
+  margin-left: 20px;
   font-size: 3rem;
   font-weight: 600;
   color: white;
   line-height: 1.5;
 }
 
-.point input {
+input {
   width: 160px;
   height: 80px;
   display: inline;
@@ -63,4 +63,10 @@ h1 {
 
 .func-button {
   /* background-color: blue; */
+}
+
+
+.make-inline{
+  display: inline;
+
 }

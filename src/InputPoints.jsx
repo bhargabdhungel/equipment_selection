@@ -57,7 +57,7 @@ function InputPoints() {
     if (x === "" || y === "") {
       return;
     }
-    dispatch(dataActions.addPoint({ point: [Number(x), Number(y)] }));
+    dispatch(dataActions.addPoint([Number(x), Number(y)]));
   };
   return (
     <div>

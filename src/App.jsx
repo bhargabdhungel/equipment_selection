@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 
 function App() {
   const points = useSelector((state) => state.data.points);
+  const n = points.length;
   const size = points.map((point) => point[0]);
   const wt = points.map((point) => point[1]);
   const totalWt = wt.reduce((a, b) => a + b, 0);
@@ -24,7 +25,7 @@ function App() {
       <h1>Equipment Design</h1>
       <Plot size={size} wtPercent={wtPercent} passing={passing} />
       <InputPoints />
-      <FindValues />
+      {n >0 && <FindValues size={size} passing={passing}/>}
     </>
   );
 }
