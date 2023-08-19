@@ -22,17 +22,13 @@ function WtPercent(props) {
         placeholder="Size"
         onChange={handleChange}
       ></input>
-
-      {passingVal >= 0 && <h1 className="make-inline">Cumulative Passing {passingVal} 😊</h1>}
+      {passingVal >= 0 && <div className="passing-val make-inline">Passing {passingVal} 😊</div>}
     </div>
   );
 }
 
 function FindValues(props) {
-  // var wtPercentSpline = new Spline(props.size, props.wtPercent);
   var passingSpline = new Spline(props.size, props.passing);
-  // var gg = wtPercentSpline.at(1);
-  // console.log(gg);
 
   return (
     <WtPercent size={props.size} passing={props.passing} passingSpline = {passingSpline}/>

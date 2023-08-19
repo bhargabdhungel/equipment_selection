@@ -70,3 +70,9 @@ input {
   display: inline;
 
 }
+
+.passing-val{
+  /* display: inline; */
+  width: 100px;
+  font-size: 36px;
+}
