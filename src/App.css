@@ -13,6 +13,7 @@ h1 {
 .point input {
   width: 80px;
   height: 40px;
+  display: inline;
   border: none;
   border-radius: 15px;
   margin: 20px;
