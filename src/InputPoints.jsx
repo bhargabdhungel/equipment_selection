@@ -2,10 +2,15 @@ import { useDispatch } from "react-redux";
 import { dataActions } from "./store/data-slice";
 
 function Point() {
+  function handleChange(event) {
+    event.preventDefault();
+    // round to 2 decimal places
+    event.target.value = Math.round(event.target.value * 100) / 100;
+  }
   return (
     <div className="point">
-      <input type="number" name="x" placeholder="Size"></input>
-      <input type="number" name="y" placeholder="Weight"></input>
+      <input type="number" step="any" name="x" placeholder="Size" onChange={handleChange}></input>
+      <input type="number" step="any" name="y" placeholder="Weight" onChange={handleChange}></input>
     </div>
   );
 }
@@ -57,6 +62,7 @@ function InputPoints() {
     if (x === "" || y === "") {
       return;
     }
+    console.log(x, y);
     dispatch(dataActions.addPoint([Number(x), Number(y)]));
   };
   return (

@@ -6,6 +6,8 @@ function WtPercent(props) {
   const dispatch = useDispatch();
   function handleChange(event) {
     event.preventDefault();
+    // round to 2 decimal places
+    event.target.value = Math.round(event.target.value * 100) / 100;
     dispatch(dataActions.setPassingSize(Number(event.target.value)));
   }
   const passingSize = useSelector((state) => state.data.passingSize);
